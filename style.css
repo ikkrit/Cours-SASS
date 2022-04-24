@@ -1,0 +1,169 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+  background: gray;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+  margin: 1rem;
+}
+
+.table {
+  width: 100%;
+}
+.table td {
+  border: 1px solid #ccc;
+}
+.table thead {
+  background: #000;
+  color: #fff;
+}
+.table thead th {
+  background: #000;
+}
+
+.btn, .card-action, .btn-danger, .card-cancel {
+  padding: 5px 12px;
+  border-radius: 3px;
+}
+
+.btn, .card-action, .btn-danger, .card-cancel {
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 5px 12px;
+  background: #698fd6;
+  color: #fff;
+}
+.btn:hover, .card-action:hover, .btn-danger:hover, .card-cancel:hover {
+  background: #43629b;
+}
+
+.btn-danger, .card-cancel {
+  background: #b34d4d;
+}
+.btn-danger:hover, .card-cancel:hover {
+  background: #742121;
+}
+
+.card {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+  padding: 10px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.card::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid #FFFF00;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 10px);
+}
+
+.card-actions {
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn, .btn-danger, .card-action, .card-cancel {
+    width: 100%;
+  }
+}
+.boxes {
+  height: 50px;
+  width: 50%;
+  background: blue;
+}
+.boxes .boxes__box {
+  display: flex;
+  background: yellow;
+  justify-content: space-around;
+  border-radius: 50px;
+}
+.boxes .boxes__box--first {
+  background: beige;
+  border-radius: 50px;
+}
+.boxes .boxes__box--second {
+  background: red;
+}
+.boxes .boxes__box--first:hover {
+  background: pink;
+}
+.boxes .boxes__box--third {
+  background: green;
+}
+
+.m-i {
+  margin: 0 1rem;
+}
+
+.m-i {
+  margin: 0 2rem;
+}
+
+.m-i {
+  margin: 0 3rem;
+}
+
+.m-i {
+  margin: 0 4rem;
+}
+
+.icon-animal {
+  background: url(img/animal.png);
+}
+
+/*# sourceMappingURL=style.css.map */

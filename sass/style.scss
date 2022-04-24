@@ -1,0 +1,150 @@
+@import "libs/reset.scss";
+@import "libs/mixins.scss";
+@import "libs/responsive.scss";
+@import "libs/function.scss";
+
+//darken() asombrir (couleur, valeur de darken)
+//lighten() eclaircir (couleur, valeur de lighten)
+
+$primary: rgb(105, 143, 214);
+$padding: 20px;
+@mixin border {
+    border-radius: 50px;
+}
+
+body {
+    padding: $padding;
+    background: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    margin: 1rem;
+}
+
+.table {
+    width: 100%;
+    td {
+        border: 1px solid #ccc;
+    }
+
+    thead {
+        background: #000;
+        color: #fff;
+
+        th {
+            background: #000;
+        }
+    }
+}
+
+%btn {
+    padding: 5px 12px;
+    border-radius: 3px;
+}
+
+.btn {
+    @extend %btn;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 5px 12px;
+    background: $primary;
+    color: #fff;
+
+    &:hover {
+        background: rgb(67, 98, 155);
+    }
+
+}
+
+.btn-danger {
+    @extend .btn;
+    background: rgb(179, 77, 77);
+    &:hover {
+        background: rgb(116, 33, 33);
+    }
+}
+
+%shadow {
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+}
+
+.card {
+    @extend %shadow;
+    padding: 10px;
+    border-radius: 3px;
+    position: relative;
+    //@include rotate(60deg);
+}
+
+.card::after { // Astuce triangle css
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid #FFFF00;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 10px);
+}
+
+.card-action {
+    @extend .btn;
+}
+
+.card-cancel {
+    @extend .btn-danger;
+}
+
+.card-actions {
+    display: flex;
+}
+
+@media #{$medium-up} {
+    .btn {
+        width: 100%;
+    }
+}
+
+.boxes {
+    height: 50px;
+    width: 50%;
+    background: blue;
+
+    .boxes__box {
+        display: flex;
+        background: yellow;
+        justify-content: space-around;
+        @include border();
+    }
+    .boxes__box--first {
+        background: beige;
+        @include border();
+    }
+    .boxes__box--second {
+        background: red;
+    }
+    .boxes__box--first:hover {
+        background: pink;
+    }
+    .boxes__box--third {
+        background: green;
+    }
+}
+
+// boucle
+@for $i from 1 through 4 {
+    .m-#{i} {
+        margin: 0 ($i * 1rem);
+    }
+}
+
+$animals: bear, lion, camel;
+@each $animal in animals {
+
+    .icon-#{animal} {
+        background: url(img/#{animal}.png);
+    }
+}
+

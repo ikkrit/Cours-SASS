@@ -1,0 +1,8 @@
+// commande //
+sass sass/style.scss style.css --watch
+// Compresser //
+sass sass/style.scss style.css --style=compressed
+// Compression optimiser //
+sass sass/style.scss style.css --styll=compressed --no-source-map
+
+
